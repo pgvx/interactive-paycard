@@ -15,7 +15,7 @@ body {
 
 .card {
   width: 25%;
-  height: 33%;
+  height: 28%;
   background-image: linear-gradient(to bottom right, #8338EC, #331832);
   position: relative;
   margin-left: 35%;
@@ -23,23 +23,19 @@ body {
   display: flex;
   flex-direction: column; }
 
-.topRow {
+.row {
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
-  flex: .55;
+  flex: 1;
   height: 25%;
-  border: 1px solid red;
   width: 100%; }
 
 .stamp {
   margin-top: 3%;
-  margin-left: 15%;
+  margin-left: 7%;
   color: #fafafa;
-  flex: 1; }
-
-.buffer {
-  flex: 1; }
+  flex: 2; }
 
 .visa {
   flex: 1;
@@ -51,34 +47,54 @@ body {
   display: flex;
   width: 100%;
   flex-basis: 100%;
-  border: 1px solid red;
   margin-top: 8%; }
 
 h1 {
   text-align: center;
   width: 100%;
   color: #fafafa;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 400;
   font-family: 'Inconsolata', monospace; }
 
 .cardNumberContainer {
   display: flex;
   width: 100%;
-  flex: .65;
-  border: 1px solid blue; }
+  flex: .65; }
 
 .cardHolder {
-  flex: 1;
-  border: 1px solid white; }
+  flex: 2; }
 
-.secondBuffer {
-  flex: 1;
-  border: 1px solid white; }
+.holder {
+  margin-top: 5%;
+  margin-left: 10%;
+  font-family: Avenir;
+  color: #fafafa;
+  font-size: 80%;
+  opacity: .8; }
+
+.name {
+  font-family: Avenir;
+  margin-left: 10%;
+  font-weight: 600;
+  color: #fafafa; }
 
 .expirationDate {
-  flex: 1;
-  border: 1px solid white; }
+  flex: 1; }
+
+.expires {
+  margin-top: 10%;
+  margin-left: 8%;
+  font-family: Avenir;
+  color: #fafafa;
+  font-size: 80%;
+  opacity: .8; }
+
+.date {
+  font-family: Avenir;
+  margin-left: 8%;
+  color: #fafafa;
+  font-weight: 600; }
 
 .form {
   width: 35%;
