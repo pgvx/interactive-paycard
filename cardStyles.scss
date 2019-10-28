@@ -7,7 +7,6 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #AED9E0;
-    background-color: #CAA8F5;
 }
 .container {
     width: 100%;
@@ -42,7 +41,7 @@ body {
     .visa {
         flex: 1;
         margin-top: 3%;
-        margin-right: 10%;
+        margin-left: 6%;
         color: #fafafa;
     }
 .cardNumberContainer {
@@ -55,7 +54,7 @@ body {
         text-align: center;
         width: 100%;
         color: #fafafa;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: 400;
         font-family: 'Inconsolata', monospace;
     }
@@ -84,6 +83,7 @@ body {
     }
 .expirationDate {
     flex: 1;
+    margin-left: 25%;
 }
     .expires {
         margin-top: 10%;
@@ -95,18 +95,7 @@ body {
     }
     .date {
         font-family: Avenir;
-        margin-left: 8%;
+        // margin-right: 10%;
         color: #fafafa;
         font-weight: 600;
     }
-
-.form {
-    width: 35%;
-    margin-top: -9%;
-    z-index: -1;
-    height:58%;
-    margin-left: 30%;
-    background-color: #fafafa;
-    border-radius: 20px;
-    box-shadow: 0px 2px 25px rgba(0,0,0, .5);
-}
