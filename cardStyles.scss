@@ -19,7 +19,7 @@ body {
     background-image: linear-gradient(to bottom right, #8338EC, #331832);
     position: relative;
     margin-left: 35%;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -95,7 +95,6 @@ body {
     }
     .date {
         font-family: Avenir;
-        // margin-right: 10%;
         color: #fafafa;
         font-weight: 600;
     }
