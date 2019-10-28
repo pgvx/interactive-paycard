@@ -6,7 +6,8 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #AED9E0; }
+  background-color: #AED9E0;
+  background-color: #CAA8F5; }
 
 .container {
   width: 100%;
@@ -106,4 +107,4 @@ h1 {
   border-radius: 20px;
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.5); }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=cardStyles.css.map */
