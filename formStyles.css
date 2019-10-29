@@ -43,7 +43,11 @@ input {
   height: 45px;
   border: 1px solid rgba(52, 24, 51, 0.3);
   border-radius: 5px;
-  margin-top: 4px; }
+  margin-top: 4px;
+  transition: .3s; }
+  input:hover {
+    border: 1px solid #8338EC;
+    transition: .3s; }
 
 .expirationDateDetails {
   display: flex;
@@ -75,6 +79,9 @@ select {
   height: 100%;
   font-size: 15px;
   opacity: .8; }
+  select:hover {
+    border: 1px solid #8338EC;
+    transition: .3s; }
 
 option {
   height: 25px;
@@ -116,5 +123,9 @@ button {
     transition: 1s;
     background-image: linear-gradient(to bottom right, #331832, #8338EC);
     cursor: pointer; }
+
+.inputActive {
+  border: 1px solid #8338EC;
+  transition: .3s; }
 
 /*# sourceMappingURL=formStyles.css.map */
