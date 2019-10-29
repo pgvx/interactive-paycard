@@ -13,32 +13,19 @@ const cardHolderName = document.querySelector('.cardHolderWrapper');
 const cardNumberWrapper = document.querySelector('.cardNumberWrapper');
 const expirationDateWrapper = document.querySelector('.expirationDateWrapper');
 const cvvWrapper = document.querySelector('.cvvWrapper');
-
 const inputWrappers = [cardHolderName, cardNumberWrapper, expirationDateWrapper, cvvWrapper];
 
-const addBorderToWrapperOnClick = (e) => {
+const removeOutlines = (wrapper) => {
     inputWrappers.forEach( (wrapper) => {
-        wrapper.addEventListener('click', (e) => {
-            removeOutlines();
-             e.target.parentElement.classList.add('active')
-        })
+        wrapper.classList.remove('active');
     })
 }
 
-const addBorderToActiveElement = () => {
-    document.addEventListener('click', (e) => {
-        addBorderToWrapperOnClick();
-        if (inputs.includes(e.target)) {
-            console.log('e :', e.target)
-            inputsSwitchCase();
-        } else {
-            removeOutlines();
-            removeInputBorders();
-        }
+const removeInputBorders = (input) => {
+    inputs.forEach( (input) => {
+        input.classList.remove('inputActive')
     })
 }
-
-
 
 const inputsSwitchCase = () => {
     inputs.forEach( (input) => {
@@ -82,15 +69,16 @@ const inputsSwitchCase = () => {
 })
 }
 
-const removeOutlines = (wrapper) => {
-    inputWrappers.forEach( (wrapper) => {
-        wrapper.classList.remove('active');
-    })
-}
 
-const removeInputBorders = (input) => {
-    inputs.forEach( (input) => {
-        input.classList.remove('inputActive')
+const addBorderToActiveElement = () => {
+    document.addEventListener('click', (e) => {
+        if (inputs.includes(e.target)) {
+            console.log('e :', e.target)
+            inputsSwitchCase();
+        } else {
+            removeOutlines();
+            removeInputBorders();
+        }
     })
 }
 
