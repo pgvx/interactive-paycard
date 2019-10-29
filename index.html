@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="cardStyles.css">
     <link rel="stylesheet" href="formStyles.css">
 
-    <script defer src="main.js"></script>
+    <script defer src="addBorderOnClick.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
@@ -20,7 +20,11 @@
                 <i class="fab fa-hooli fa-4x stamp"></i>
                 <i class="fab fa-cc-stripe fa-4x visa"></i>
             </div>
-            <div class="cardNumberContainer"><h1>####-####-####-####</h1></div>
+            <div class="cardNumberContainer">
+                <div class="cardNumberWrapper">
+                    <h1>####-####-####-####</h1>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="cardHolder">
@@ -31,8 +35,10 @@
                     
                 </div>
                 <div class="expirationDate">
-                    <p class="expires">Expires</p>
-                    <h3 class="date">05/21</h3>
+                    <div class="expirationDateWrapper">
+                        <p class="expires">Expires</p>
+                        <h3 class="date">05/21</h3>
+                    </div>
                 </div>
             </div>
             
@@ -40,13 +46,13 @@
         <div class="form">
             <div class="formContent">
                 <label for="">Card Number</label>
-                <input type="text">
+                <input type="text" class="cardNumberInput input">
                 <label for="">Card Holder</label>
-                <input type="text" class="cardHolderInput">
+                <input type="text" class="cardHolderInput input">
                 <label for="">Expiration Date</label>
                 <div class="expirationDateDetails">
                     <div class="month">
-                        <select name="" id="" class="monthSelect">
+                        <select name="" id="" class="monthSelect input">
                             <option value="" disabled selected>Month</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
@@ -63,7 +69,7 @@
                         </select>
                     </div>
                     <div class="year">
-                        <select name="" id="" class="yearSelect">
+                        <select name="" id="" class="yearSelect input">
                             <option value="" disabled selected>Year</option>
                             <option value="2019">2019</option>
                             <option value="2020">2020</option>
@@ -80,7 +86,9 @@
                         </select>
                     </div>
                     <div class="cvv">
-                       <input type="text" class="cvvInput" placeholder="CCV">
+                        <div class="cvvWrapper">
+                            <input type="text" class="cvvInput input" placeholder="CCV">
+                        </div>
                     </div>
                 </div>
                 <button>Submit</button>
