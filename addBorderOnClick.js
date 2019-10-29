@@ -10,48 +10,68 @@ const yearSelect = document.querySelector('.yearSelect');
 
 // INPUT WRAPPERS
 const cardHolderName = document.querySelector('.cardHolderWrapper');
-const cardNumberContainer = document.querySelector('.cardNumberWrapper');
+const cardNumberWrapper = document.querySelector('.cardNumberWrapper');
 const expirationDateWrapper = document.querySelector('.expirationDateWrapper');
 const cvvWrapper = document.querySelector('.cvvWrapper');
 
-const inputWrappers = [cardHolderName, cardNumberContainer, expirationDateWrapper, cvvWrapper];
+const inputWrappers = [cardHolderName, cardNumberWrapper, expirationDateWrapper, cvvWrapper];
 
-const form = document.querySelector('.form');
+const addBorderToWrapperOnClick = (e) => {
+    inputWrappers.forEach( (wrapper) => {
+        wrapper.addEventListener('click', (e) => {
+            removeOutlines();
+             e.target.parentElement.classList.add('active')
+        })
+    })
+}
 
 const addBorderToActiveElement = () => {
     document.addEventListener('click', (e) => {
-        console.log(inputs.includes(e.target));
+        addBorderToWrapperOnClick();
         if (inputs.includes(e.target)) {
             console.log('e :', e.target)
-            switchCase();
+            inputsSwitchCase();
         } else {
             removeOutlines();
+            removeInputBorders();
         }
     })
-    
 }
 
-const switchCase = () => {
+
+
+const inputsSwitchCase = () => {
     inputs.forEach( (input) => {
     input.addEventListener('click', (e) => {
-        switch(e.target) {
+        console.log('e.target: ', e.target);
+        switch(e.target) { 
             case cardHolderInput:
                 removeOutlines();
+                removeInputBorders();
+                e.target.classList.add('inputActive');
                 cardHolderName.classList.add('active');
                 break;
             case cardNumberInput:
                 removeOutlines();
-                cardNumberContainer.classList.add('active');
+                removeInputBorders();
+                e.target.classList.add('inputActive');
+                cardNumberWrapper.classList.add('active');
                 break;
             case cvvInput:
                 removeOutlines();
+                removeInputBorders();
+                e.target.classList.add('inputActive');
                 cvvWrapper.classList.add('active');
                 break;
             case monthSelect:
                 removeOutlines();
+                removeInputBorders();
+                yearSelect.classList.add('inputActive')
                 expirationDateWrapper.classList.add('active');
             case yearSelect:
                 removeOutlines();
+                removeInputBorders();
+                yearSelect.classList.add('inputActive')
                 expirationDateWrapper.classList.add('active');
                 break; 
             default:
@@ -61,9 +81,16 @@ const switchCase = () => {
     })
 })
 }
+
 const removeOutlines = (wrapper) => {
     inputWrappers.forEach( (wrapper) => {
         wrapper.classList.remove('active');
+    })
+}
+
+const removeInputBorders = (input) => {
+    inputs.forEach( (input) => {
+        input.classList.remove('inputActive')
     })
 }
 
