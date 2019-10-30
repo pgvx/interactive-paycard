@@ -26,15 +26,42 @@ cvvInput.addEventListener('click', () => {
     cardIsFlipped = true;
 });
 
-numbers = [0,1,2,3,4,5,6,7,8,9];
 
-cardNumberInput.onkeydown = updateCardNumberDisplay;
-cardNumberInput.onkeyup = updateCardNumberDisplay;
-cardNumberInput.onkeypress = updateCardNumberDisplay;
 
-cardHolderInput.onkeydown = updateNameDisplay;
-cardHolderInput.onkeyup = updateNameDisplay;
-cardHolderInput.onkeypress = updateNameDisplay;
+const updateDisplayFunctions = {
+    updateCardNumber: function updateCardNumberDisplay() {
+        if (!/[^$,\.\d]/.test(this.value)) {
+            if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
+                this.value += '.';
+                hasError = false
+                hasError ? addError() : removeError();
+            } else {
+                document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+                hasError = false
+                hasError ? addError() : removeError();
+            }
+        } else {
+            document.querySelector('.cardNumber').innerHTML =  "enter a number please";
+            hasError = true;
+            hasError ? addError() : removeError();
+        }
+    },
+    updateName: function updateNameDisplay() {
+        if (this.value.length > 17) {
+            document.querySelector('.name').innerHTML = this.value + '..'
+        } else {
+            document.querySelector('.name').innerHTML = this.value || "Your Name";
+        }
+    }  
+}
+
+cardNumberInput.onkeydown = updateDisplayFunctions.updateCardNumber;
+cardNumberInput.onkeyup = updateDisplayFunctions.updateCardNumber;
+cardNumberInput.onkeypress = updateDisplayFunctions.updateCardNumber;
+
+cardHolderInput.onkeydown = updateDisplayFunctions.updateName;
+cardHolderInput.onkeyup = updateDisplayFunctions.updateName;
+cardHolderInput.onkeypress = updateDisplayFunctions.updateName;
 
 let hasError = false;
 
@@ -45,30 +72,4 @@ const addError = () => {
 const removeError = () => {
     document.querySelector('.cardNumber').classList.remove('error');
     document.querySelector('.cardNumberInput').classList.remove('error');
-}
-
-function updateCardNumberDisplay() {
-    if (!/[^$,\.\d]/.test(this.value)) {
-        if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
-            this.value += '.';
-            hasError = false
-            hasError ? addError() : removeError();
-        } else {
-            document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
-            hasError = false
-            hasError ? addError() : removeError();
-        }
-    } else {
-        document.querySelector('.cardNumber').innerHTML =  "enter a number please";
-        hasError = true;
-        hasError ? addError() : removeError();
-    }
-}
-
-function updateNameDisplay() {
-    if (this.value.length > 17) {
-        document.querySelector('.name').innerHTML = this.value + '..'
-    } else {
-        document.querySelector('.name').innerHTML = this.value || "Your Name";
-    }
 }
