@@ -13,15 +13,67 @@ body {
   height: 100%;
   margin-top: 3%; }
 
-.card {
+.front {
+  z-index: 2;
+  /* for firefox 31 */
   width: 25%;
-  height: 28%;
+  height: 220px;
   background-image: linear-gradient(to bottom right, #8338EC, #331832);
   position: relative;
   margin-left: 35%;
   border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  transform: rotateY(0deg); }
+
+.back {
+  transition: .2s;
+  z-index: 2;
   display: flex;
+  width: 25%;
+  height: 220px;
+  background-image: linear-gradient(to bottom right, #8338EC, #331832);
+  position: relative;
+  margin-left: 35%;
+  border-radius: 15px;
   flex-direction: column; }
+
+.back .backTopRow {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 10%; }
+
+.back .backMiddleRow {
+  width: 100%;
+  height: 60px;
+  margin-top: 5%; }
+
+.back .backMiddleRow p {
+  float: right;
+  margin-right: 10%;
+  font-family: Avenir;
+  color: #fafafa;
+  font-size: 90%; }
+
+.back .whiteRow {
+  width: 85%;
+  height: 30px;
+  float: left;
+  margin-left: 7.5%;
+  background-color: #fafafa;
+  border-radius: 5px; }
+
+.back .backBottomRow {
+  width: 100%;
+  height: 60px;
+  margin-top: 2%; }
+
+.back .backBottomRow i {
+  float: right;
+  color: #fafafa;
+  margin-right: 8%;
+  opacity: .5; }
 
 .row {
   display: flex;

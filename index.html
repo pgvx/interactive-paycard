@@ -9,6 +9,8 @@
 
     <script defer src="addBorderOnClick.js"></script>
     <script defer src="main.js"></script>
+    <script defer src="flipCard.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
@@ -17,32 +19,47 @@
 <body>
     <div class="container">
         <div class="card">
-            <div class="row">
-                <i class="fab fa-hooli fa-4x stamp"></i>
-                <i class="fab fa-cc-stripe fa-4x visa"></i>
-            </div>
-            <div class="cardNumberContainer">
-                <div class="cardNumberWrapper">
-                    <h1>####-####-####-####</h1>
+            <div class="front">
+                <div class="row">
+                    <i class="fab fa-hooli fa-4x stamp"></i>
+                    <i class="fab fa-cc-stripe fa-4x visa"></i>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="cardHolder">
+                <div class="cardNumberContainer">
+                    <div class="cardNumberWrapper">
+                        <h1>####-####-####-####</h1>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="cardHolder">
                     <div class="cardHolderWrapper">
                         <p class="holder">Card Holder</p>
                         <h3 class="name">Sherif Elmetwally</h3>
                     </div>
-                    
-                </div>
-                <div class="expirationDate">
-                    <div class="expirationDateWrapper">
-                        <p class="expires">Expires</p>
-                        <h3 class="date">05/21</h3>
+                            
                     </div>
-                </div>
+                    <div class="expirationDate">
+                        <div class="expirationDateWrapper">
+                            <p class="expires">Expires</p>
+                            <h3 class="date">05/21</h3>
+                        </div>
+                    </div>
+
             </div>
             
+            </div>
+            <div class="back">
+                    <div class="backTopRow"></div>
+                    <div class="backMiddleRow">
+                        <p>CVV</p>
+                        <div class="whiteRow">
+                            <p class="cvvContainer"></p>
+                        </div>
+                    </div>
+                    <div class="backBottomRow">
+                        <i class="fab fa-cc-stripe fa-3x"></i>
+                    </div>
+            </div>
         </div>
         <div class="form">
             <div class="formContent">
