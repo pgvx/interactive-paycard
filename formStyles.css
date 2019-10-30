@@ -44,7 +44,8 @@ input {
   border: 1px solid rgba(52, 24, 51, 0.3);
   border-radius: 5px;
   margin-top: 4px;
-  transition: .3s; }
+  transition: .3s;
+  font-size: 15px; }
   input:hover {
     border: 1px solid #8338EC;
     transition: .3s; }
