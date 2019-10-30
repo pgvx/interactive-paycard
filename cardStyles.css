@@ -22,14 +22,14 @@ body {
   position: relative;
   margin-left: 35%;
   border-radius: 15px;
-  display: none;
+  display: flex;
   flex-direction: column;
   transform: rotateY(0deg); }
 
 .back {
   transition: .2s;
   z-index: 2;
-  display: flex;
+  display: none;
   width: 25%;
   height: 220px;
   background-image: linear-gradient(to bottom right, #8338EC, #331832);
