@@ -30,7 +30,6 @@ const removeInputBorders = (input) => {
 const inputsSwitchCase = () => {
     inputs.forEach( (input) => {
     input.addEventListener('click', (e) => {
-        console.log('e.target: ', e.target);
         switch(e.target) { 
             case cardHolderInput:
                 removeOutlines();
@@ -73,7 +72,6 @@ const inputsSwitchCase = () => {
 const addBorderToActiveElement = () => {
     document.addEventListener('click', (e) => {
         if (inputs.includes(e.target)) {
-            console.log('e :', e.target)
             inputsSwitchCase();
         } else {
             removeOutlines();
