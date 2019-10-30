@@ -25,3 +25,15 @@ cvvInput.addEventListener('click', () => {
     front.style.display = "none";
     cardIsFlipped = true;
 });
+
+cardNumberInput.onkeydown = updateNameDisplay;
+cardNumberInput.onkeyup = updateNameDisplay;
+cardNumberInput.onkeypress = updateNameDisplay;
+
+function updateNameDisplay() {
+    if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
+        this.value += ' ';
+    } else {
+        document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+    }
+}
