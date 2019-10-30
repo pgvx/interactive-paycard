@@ -36,41 +36,34 @@ cardHolderInput.onkeydown = updateNameDisplay;
 cardHolderInput.onkeyup = updateNameDisplay;
 cardHolderInput.onkeypress = updateNameDisplay;
 
+let hasError = false;
+
+const addError = () => {
+    document.querySelector('.cardNumber').classList.add('error');
+    document.querySelector('.cardNumberInput').classList.add('error');
+}
+const removeError = () => {
+    document.querySelector('.cardNumber').classList.remove('error');
+    document.querySelector('.cardNumberInput').classList.remove('error');
+}
+
 function updateCardNumberDisplay() {
     if (!/[^$,\.\d]/.test(this.value)) {
         if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
             this.value += '.';
+            hasError = false
+            hasError ? addError() : removeError();
         } else {
             document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+            hasError = false
+            hasError ? addError() : removeError();
         }
     } else {
-        alert('numbers only');
-        this.value = '';
-        document.querySelector('.cardNumber').innerHTML =  "try again";
+        document.querySelector('.cardNumber').innerHTML =  "enter a number please";
+        hasError = true;
+        hasError ? addError() : removeError();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function updateNameDisplay() {
     if (this.value.length > 17) {
@@ -79,8 +72,3 @@ function updateNameDisplay() {
         document.querySelector('.name').innerHTML = this.value || "Your Name";
     }
 }
-
-function updateMonth() {
-    document.querySelector('.date').innerHTML = monthSelect.value || "02/98";
-}
-updateMonth();
