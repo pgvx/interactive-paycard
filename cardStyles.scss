@@ -13,9 +13,6 @@ body {
     height: 100%;
     margin-top: 3%;
 }
-.card {
-    
-}
 .front  {
     z-index: 2;
     /* for firefox 31 */
@@ -119,7 +116,7 @@ body {
         text-align: center;
         width: 100%;
         color: #fafafa;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 400;
         font-family: 'Inconsolata', monospace;
     }
@@ -170,4 +167,12 @@ body {
         background-color: rgba(0,0,0, .1);
         border: 2px solid rgba(255,255,255, .5);
         border-radius: 4px;
+    }
+    .error {
+        border: 2px solid #DA3E52;
+        font-size: 25px;
+        font-family: Avenir;
+        &:hover {
+            border: 2px solid #DA3E52;
+            }
     }
