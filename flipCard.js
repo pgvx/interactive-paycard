@@ -26,14 +26,61 @@ cvvInput.addEventListener('click', () => {
     cardIsFlipped = true;
 });
 
-cardNumberInput.onkeydown = updateNameDisplay;
-cardNumberInput.onkeyup = updateNameDisplay;
-cardNumberInput.onkeypress = updateNameDisplay;
+numbers = [0,1,2,3,4,5,6,7,8,9];
 
-function updateNameDisplay() {
-    if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
-        this.value += ' ';
+cardNumberInput.onkeydown = updateCardNumberDisplay;
+cardNumberInput.onkeyup = updateCardNumberDisplay;
+cardNumberInput.onkeypress = updateCardNumberDisplay;
+
+cardHolderInput.onkeydown = updateNameDisplay;
+cardHolderInput.onkeyup = updateNameDisplay;
+cardHolderInput.onkeypress = updateNameDisplay;
+
+function updateCardNumberDisplay() {
+    if (!/[^$,\.\d]/.test(this.value)) {
+        if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
+            this.value += '.';
+        } else {
+            document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+        }
     } else {
-        document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+        alert('numbers only');
+        this.value = '';
+        document.querySelector('.cardNumber').innerHTML =  "try again";
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function updateNameDisplay() {
+    if (this.value.length > 17) {
+        document.querySelector('.name').innerHTML = this.value + '..'
+    } else {
+        document.querySelector('.name').innerHTML = this.value || "Your Name";
+    }
+}
+
+function updateMonth() {
+    document.querySelector('.date').innerHTML = monthSelect.value || "02/98";
+}
+updateMonth();
