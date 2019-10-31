@@ -22,7 +22,7 @@ body {
     z-index: -1;
     height: 66%;
     margin-left: 30%;
-    background-color: #fafafa;
+    background-color: #fff;
     border-radius: 20px;
     box-shadow: 0px 2px 25px rgba(0,0,0, .5);
 }
@@ -43,13 +43,13 @@ body {
     }
     input {
         height: 45px;
-        border: 1px solid rgba(52, 24, 51, .3);
+        border: .5px solid rgba(52, 24, 51, .2);
         border-radius: 5px;
         margin-top: 4px;
         transition: .3s;
         font-size: 15px;
         &:hover {
-            border: 1px solid #8338EC;
+            border: .5px solid #8338EC;
             transition: .3s;
         }
     } 
@@ -132,6 +132,6 @@ button {
 }
 
 .inputActive {
-    border: 1px solid #8338EC;
+    border: .5px solid #8338EC;
     transition: .3s;
 }

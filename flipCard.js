@@ -9,9 +9,9 @@ const cvvInput = document.querySelector('.cvvInput');
 const cardNumberInput = document.querySelector('.cardNumberInput');
 const monthSelect = document.querySelector('.monthSelect');
 const yearSelect = document.querySelector('.yearSelect');
-const cardHolderInput = document.querySelector('.cardHolderInput');
+const cardHolderInputField = document.querySelector('.cardHolderInput');
 
-const frontSideInputs = [cardHolderInput, cardNumberInput, yearSelect, monthSelect];
+const frontSideInputs = [cardHolderInputField, cardNumberInput, yearSelect, monthSelect];
 
 frontSideInputs.forEach( (input) => {
     input.addEventListener('click', () => {
@@ -21,6 +21,7 @@ frontSideInputs.forEach( (input) => {
     })
 })
 cvvInput.addEventListener('click', () => {
+    console.log('hits');
     back.style.display = "flex";
     front.style.display = "none";
     cardIsFlipped = true;
@@ -42,7 +43,7 @@ const updateDisplayFunctions = {
                 hasError ? addError() : removeError();
             }
         } else {
-            document.querySelector('.cardNumber').innerHTML =  "enter a number please";
+            document.querySelector('.cardNumber').innerHTML =  "number please...";
             hasError = true;
             hasError ? addError() : removeError();
         }
@@ -60,9 +61,9 @@ cardNumberInput.onkeydown = updateDisplayFunctions.updateCardNumber;
 cardNumberInput.onkeyup = updateDisplayFunctions.updateCardNumber;
 cardNumberInput.onkeypress = updateDisplayFunctions.updateCardNumber;
 
-cardHolderInput.onkeydown = updateDisplayFunctions.updateName;
-cardHolderInput.onkeyup = updateDisplayFunctions.updateName;
-cardHolderInput.onkeypress = updateDisplayFunctions.updateName;
+cardHolderInputField.onkeydown = updateDisplayFunctions.updateName;
+cardHolderInputField.onkeyup = updateDisplayFunctions.updateName;
+cardHolderInputField.onkeypress = updateDisplayFunctions.updateName;
 
 let hasError = false;
 
