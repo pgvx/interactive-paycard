@@ -15,7 +15,6 @@ body {
 
 .front {
   z-index: 2;
-  /* for firefox 31 */
   width: 25%;
   height: 220px;
   background-image: linear-gradient(to bottom right, #8338EC, #331832);
@@ -137,7 +136,8 @@ h1 {
 
 .name {
   font-family: Avenir;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 105%;
   color: #fafafa; }
 
 .expirationDate {
@@ -155,7 +155,7 @@ h1 {
 .date {
   font-family: Avenir;
   color: #fafafa;
-  font-weight: 600; }
+  font-weight: 500; }
 
 .active {
   background-color: rgba(0, 0, 0, 0.1);
