@@ -33,7 +33,8 @@ const updateDisplayFunctions = {
         if (!/[^$,\.\d]/.test(this.value)) {
             if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
                 this.value += '.';
-                hasError = false
+                document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+                hasError = false;
                 hasError ? addError() : removeError();
             } else {
                 document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
