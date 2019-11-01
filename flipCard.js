@@ -70,10 +70,14 @@ console.log('monthValue: ', monthValue)
 monthSelect.addEventListener('change', function() {
     console.log('this.value: ', this.value)
     monthValue = this.value;
-    document.querySelector('.date').innerHTML = monthValue;
+    document.querySelector('.monthValue').innerHTML = monthValue;
   }, false);
 
-
+yearSelect.addEventListener('change', function() {
+    console.log('this.value: ', this.value)
+    yearValue = this.value;
+    document.querySelector('.yearValue').innerHTML = yearValue;
+}, false);
 
 
 cardNumberInput.onkeydown = updateDisplayFunctions.updateCardNumber;
