@@ -180,4 +180,13 @@ h1 {
   display: none;
   font-family: Avenir; }
 
+.cvvContainer {
+  color: #222 !important;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+  line-height: 30px;
+  float: right;
+  font-weight: 600;
+  margin-right: 0; }
+
 /*# sourceMappingURL=cardStyles.css.map */

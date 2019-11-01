@@ -8,7 +8,6 @@ body {
     height: 100vh;
     background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/facebook/65/money-with-wings_1f4b8.png');
     background-size: 200px 100px;
-    // background-size: cover;
 }
 .container {
     width: 100%;
@@ -143,7 +142,6 @@ body {
     .name {
         font-family: 'Source Code Pro', monospace;
         text-shadow: 0px 1px 1px #000;
-        // margin-left: 10%;
         font-weight: 500;
         font-size: 100%;
         color: #fafafa;
@@ -151,17 +149,13 @@ body {
 .expirationDate {
     flex: 1;
     margin-right: 1%;
-    // border: 1px solid red;
 }
     .expires {
         margin-top: 14%;
-        // margin-left: 8%;
         font-family: Avenir;
         color: #fafafa;
         font-size: 80%;
         opacity: .6;
-        // border: 1px solid red;
-
         font-family: 'Source Code Pro', monospace;
         text-shadow: 0px 1px 1px #000;
     }
@@ -170,8 +164,6 @@ body {
         color: #fafafa;
         font-weight: 500;
         display: flex;
-        // margin-left: 8%;
-        // border: 1px solid red;
         flex-direction: row;
         font-family: 'Source Code Pro', monospace;
         text-shadow: 0px 1px 1px #000;
@@ -191,4 +183,14 @@ body {
         font-size: 25px;
         display: none;
         font-family: Avenir;
+    }
+
+    .cvvContainer {
+        color: #222!important;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 15px;
+        line-height: 30px;
+        float: right;
+        font-weight: 600;
+        margin-right: 0;
     }
