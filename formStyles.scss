@@ -135,3 +135,12 @@ button {
     border: .5px solid #8338EC;
     transition: .3s;
 }
+
+.errorMessage {
+    color: red;
+    font-family: Avenir;
+    font-weight: 500;
+    margin-top: 1%;
+    display: none;
+    font-size: 15px;
+}
