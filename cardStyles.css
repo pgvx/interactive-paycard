@@ -163,10 +163,14 @@ h1 {
 
 .error {
   border: .5px solid #DA3E52;
-  color: #DA3E52;
-  font-size: 25px;
-  font-family: Avenir; }
+  color: #DA3E52; }
   .error:hover {
     border: .5px solid #DA3E52; }
+
+.errorMessage {
+  color: #DA3E52;
+  font-size: 25px;
+  display: none;
+  font-family: Avenir; }
 
 /*# sourceMappingURL=cardStyles.css.map */

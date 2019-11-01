@@ -40,7 +40,7 @@ const updateDisplayFunctions = {
                 hasError = false;
                 hasError ? addError() : removeError();
             } else {
-            document.querySelector('.errorMessage').style.display = "none";
+                document.querySelector('.errorMessage').style.display = "none";
                 document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
                 hasError = false
                 hasError ? addError() : removeError();
