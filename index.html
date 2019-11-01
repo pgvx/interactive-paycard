@@ -48,7 +48,6 @@
                                 <p class="divider">/</p>
                                 <p class="yearValue">98</p>
                             </div>
-                            <!-- <h3 class="date">05/21</h3> -->
                         </div>
                     </div>
 
@@ -113,7 +112,12 @@
                     </div>
                     <div class="cvv">
                         <div class="cvvWrapper">
-                            <input type="text" class="cvvInput input" placeholder="CCV">
+                            <input class="cvvInput input"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                type = "number"
+                                maxlength = "3"
+                                placeholder="CCV"
+                            />
                         </div>
                     </div>
                 </div>
