@@ -62,11 +62,18 @@ const updateDisplayFunctions = {
     } 
 }
 
+
+const dateString = document.querySelector('.date').innerHTML;
+let monthValue = dateString.slice(0,2);
+console.log('monthValue: ', monthValue)
+
 monthSelect.addEventListener('change', function() {
     console.log('this.value: ', this.value)
-    document.querySelector('.date').innerHTML = this.value;
-
+    monthValue = this.value;
+    document.querySelector('.date').innerHTML = monthValue;
   }, false);
+
+
 
 
 cardNumberInput.onkeydown = updateDisplayFunctions.updateCardNumber;
