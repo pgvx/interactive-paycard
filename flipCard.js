@@ -35,9 +35,13 @@ const updateDisplayFunctions = {
             if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
                 this.value += '.';
                 document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
+            document.querySelector('.errorMessage').style.display = "none";
+
                 hasError = false;
                 hasError ? addError() : removeError();
             } else {
+            document.querySelector('.errorMessage').style.display = "none";
+
                 document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
                 hasError = false
                 hasError ? addError() : removeError();
@@ -45,6 +49,8 @@ const updateDisplayFunctions = {
         } else {
             document.querySelector('.cardNumber').innerHTML =  "number please...";
             hasError = true;
+            document.querySelector('.errorMessage').style.display = "block";
+            this.value = null;
             hasError ? addError() : removeError();
         }
     },
