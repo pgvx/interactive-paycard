@@ -112,9 +112,10 @@ h1 {
   text-align: center;
   width: 100%;
   color: #fafafa;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
-  font-family: 'Inconsolata', monospace; }
+  font-family: 'Source Code Pro', monospace;
+  text-shadow: 0px 2px 1px #000; }
 
 .cardNumberContainer {
   display: flex;
@@ -130,39 +131,42 @@ h1 {
 
 .holder {
   margin-top: 5%;
-  font-family: Avenir;
+  font-family: 'Source Code Pro', monospace;
   color: #fafafa;
   font-size: 80%;
-  opacity: .8; }
+  opacity: .6; }
 
 .name {
-  font-family: Avenir;
+  font-family: 'Source Code Pro', monospace;
+  text-shadow: 0px 1px 1px #000;
   font-weight: 500;
-  font-size: 105%;
+  font-size: 100%;
   color: #fafafa; }
 
 .expirationDate {
   flex: 1;
-  margin-left: 25%; }
+  margin-right: 1%; }
 
 .expires {
-  margin-top: 10%;
-  margin-left: 8%;
+  margin-top: 14%;
   font-family: Avenir;
   color: #fafafa;
   font-size: 80%;
-  opacity: .8; }
+  opacity: .6;
+  font-family: 'Source Code Pro', monospace;
+  text-shadow: 0px 1px 1px #000; }
 
 .date {
-  font-family: Avenir;
+  font-family: 'Source Code Pro', monospace;
   color: #fafafa;
   font-weight: 500;
   display: flex;
-  margin-left: 8%;
-  flex-direction: row; }
+  flex-direction: row;
+  font-family: 'Source Code Pro', monospace;
+  text-shadow: 0px 1px 1px #000; }
 
 .active {
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .error {
   border: .5px solid #DA3E52;
