@@ -54,10 +54,11 @@ const updateDisplayFunctions = {
         }
     },
     updateName: function updateNameDisplay() {
+        let input = this.value.toUpperCase();
         if (this.value.length > 17) {
-            document.querySelector('.name').innerHTML = this.value + '..'
+            document.querySelector('.name').innerHTML = input + '..'
         } else {
-            document.querySelector('.name').innerHTML = this.value || "Your Name";
+            document.querySelector('.name').innerHTML = input || "Your Name";
         }
     } 
 }
