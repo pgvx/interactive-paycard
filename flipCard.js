@@ -3,6 +3,7 @@ const front = document.querySelector('.front');
 const back = document.querySelector('.back');
 
 let cardIsFlipped = false;
+let hasError = false;
 
 const cvvInput = document.querySelector('.cvvInput');
 
@@ -35,13 +36,11 @@ const updateDisplayFunctions = {
             if (this.value.length === 4 || this.value.length === 9  || this.value.length === 14 ) {
                 this.value += '.';
                 document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
-            document.querySelector('.errorMessage').style.display = "none";
-
+                document.querySelector('.errorMessage').style.display = "none";
                 hasError = false;
                 hasError ? addError() : removeError();
             } else {
             document.querySelector('.errorMessage').style.display = "none";
-
                 document.querySelector('.cardNumber').innerHTML = this.value || "####-####-####-####";
                 hasError = false
                 hasError ? addError() : removeError();
@@ -60,8 +59,15 @@ const updateDisplayFunctions = {
         } else {
             document.querySelector('.name').innerHTML = this.value || "Your Name";
         }
-    }  
+    } 
 }
+
+monthSelect.addEventListener('change', function() {
+    console.log('this.value: ', this.value)
+    document.querySelector('.date').innerHTML = this.value;
+
+  }, false);
+
 
 cardNumberInput.onkeydown = updateDisplayFunctions.updateCardNumber;
 cardNumberInput.onkeyup = updateDisplayFunctions.updateCardNumber;
@@ -70,8 +76,6 @@ cardNumberInput.onkeypress = updateDisplayFunctions.updateCardNumber;
 cardHolderInputField.onkeydown = updateDisplayFunctions.updateName;
 cardHolderInputField.onkeyup = updateDisplayFunctions.updateName;
 cardHolderInputField.onkeypress = updateDisplayFunctions.updateName;
-
-let hasError = false;
 
 const addError = () => {
     document.querySelector('.cardNumber').classList.add('error');
