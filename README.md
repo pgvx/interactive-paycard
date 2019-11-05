@@ -3,3 +3,5 @@ interactive paycard inspired by https://github.com/muhammederdem/vue-interactive
 
 ![](https://media.giphy.com/media/kFHW7W2ABSZ9i7LtUl/giphy.gif)
 
+TODO
+Make responsive and add animations
